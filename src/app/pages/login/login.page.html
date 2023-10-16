@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success">Recyclica</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input
+            label="Email"
+            labelPlacement="floating"
+            placeholder="email@domain.com"
+            type="email"
+            [clearInput]="true"
+          ></ion-input
+        ></ion-item>
+        <ion-item>
+          <ion-input
+            label="Password"
+            labelPlacement="floating"
+            placeholder="password"
+            type="password"
+            [clearInput]="true"
+          ></ion-input
+        ></ion-item>
+        <ion-button size="full" fill="clear" color="dark"
+          >Forgot Email/Password</ion-button
+        >
+        <ion-button size="full" color="success">Login</ion-button>
+        <ion-button size="full" color="success" fill="clear">Login</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
