@@ -1,0 +1,27 @@
+<ion-card>
+  <ion-card-header *ngIf="hasHeader">
+    <ion-card-subtitle>Last Pickup Call</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item lines="none">
+      <ion-icon
+        color="warning"
+        name="hourglass-outline"
+        slot="start"
+      ></ion-icon>
+      <ion-label>
+        {{ status }}
+        <p>{{ updatedAt }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>
+        <p>Created at: {{ createdAt }}</p>
+        <p>Notes:{{ notes }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card-content>
+  <ion-button *ngIf="hasFooter" color="success" size="full" fill="clear">
+    See all</ion-button
+  >
+</ion-card>
