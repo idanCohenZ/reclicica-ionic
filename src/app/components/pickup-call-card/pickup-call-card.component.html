@@ -37,7 +37,13 @@
       <ion-icon color="success" name="trophy" slot="start"></ion-icon>
       <ion-label color="success"> $ {{ moneyGathered }} </ion-label>
     </ion-item>
-    <ion-button *ngIf="hasFooter" color="success" size="full" fill="clear">
+    <ion-button
+      *ngIf="hasFooter"
+      color="success"
+      size="full"
+      fill="clear"
+      (click)="allpickUpCallsRedirect()"
+    >
       See all</ion-button
     >
   </ion-card-content>
