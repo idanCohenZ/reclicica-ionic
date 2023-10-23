@@ -17,17 +17,16 @@
               [clearInput]="true"
             ></ion-input
           ></ion-item>
-
-          <ion-label
-            *ngIf="form.get('email').touched && form.get('email').errors?.required  "
-            color="danger"
-            >Email is mandatory</ion-label
-          >
-          <ion-label
-            color="danger"
-            *ngIf="form.get('email').touched && form.get('email').errors?.email "
-            >Email is invalid</ion-label
-          >
+          <app-error-message
+            [field]="form.get('email')"
+            error="required"
+            message="Email is mandatory"
+          ></app-error-message>
+          <app-error-message
+            [field]="form.get('email')"
+            error="email"
+            message="Email is Invalid"
+          ></app-error-message>
 
           <ion-item>
             <ion-input
@@ -39,11 +38,11 @@
               [clearInput]="true"
             ></ion-input
           ></ion-item>
-          <ion-label
-            *ngIf="form.get('password').touched && form.get('password').errors?.required  "
-            color="danger"
-            >Password is mandatory</ion-label
-          >
+          <app-error-message
+            [field]="form.get('password')"
+            error="required"
+            message="password is mandatory"
+          ></app-error-message>
           <ion-button
             size="full"
             fill="clear"
